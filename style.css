@@ -19,7 +19,7 @@ body {
 .logo {
   transition: all 2s;
 }
-.logo:hover{
+.logo:hover {
   scale: 1.5;
   rotate: 360deg;
 }
@@ -84,12 +84,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .card {
   position: relative;
   left: 0px;
-  width: 300px;
+  width: 250px;
   height: 200px;
   background-color: var(--background-card);
   border-radius: 8px;
@@ -105,7 +106,7 @@ body {
   animation: none;
 }
 .card:hover {
-  transform: translateY(-16px) scale(1.8);
+  transform: translateY(-16px) scale(2);
   z-index: 99;
 }
 
@@ -153,11 +154,11 @@ footer {
   }
   75% {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    transform: scale(1.5);
+    transform: scale(1.4);
   }
   100% {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transform: scale(1.8);
+    transform: scale(1.5);
   }
 }
 
@@ -173,6 +174,17 @@ footer {
   100% {
     transform: translateZ(0) translateY(0);
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .card:first-child:hover {
+    transform: translate(150px) scale(1.5);
+    z-index: 99;
+  }
+  .card:nth-child(3n):hover {
+    transform: translate(-150px) scale(1.5);
+    z-index: 99;
   }
 }
 
@@ -216,11 +228,17 @@ footer {
   .nav:hover .hidden {
     display: block;
   }
-  .gallery {
-    margin-top: 200px;
-  }
+
   .card {
     animation: scale-animate-responsive 5s linear infinite;
+  }
+  .card:first-child:hover {
+    transform: translate(0) scale(1.5);
+    z-index: 99;
+  }
+  .card:nth-child(3n):hover {
+    transform: translate(0px) scale(1.5);
+    z-index: 99;
   }
   .card:hover {
     transform: translateY(-16px) scale(1.2);
