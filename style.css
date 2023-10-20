@@ -119,7 +119,8 @@ body {
 footer {
   display: flex;
   justify-content: end;
-  padding: 2rem;
+  bottom: 0;
+  padding: 30px;
 }
 .desc-social ul {
   list-style: none;
